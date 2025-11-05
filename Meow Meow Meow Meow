@@ -1,0 +1,3 @@
+Ak.txt containing the matrix A^k.
+cipher.txt contained A*m the encryption.
+We can calculate A and solve A*m=cypher to get the flag.
