@@ -1,0 +1,4 @@
+nc 192.168.1.250 9099 means the challenge was hosted on server at IP 192.168.1.250, port 9099.
+As MT19937 has state of 624 32 bit words I observed 624 consecutive outputs and 0^IV would return IV.
+Then XOR the 624 leaked OTP strings with the recovere IV.
+I then used the help of ai to reconstruct the MT19937 State and generated an exploit.py which when run on attempt 3 would give the flag.
