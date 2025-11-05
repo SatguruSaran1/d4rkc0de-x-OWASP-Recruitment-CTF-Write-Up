@@ -1,0 +1,6 @@
+I treated cat.paws as 30 8 byte blocks and since x.txt is 240 bytes.
+The cat picks 30 distinct 8-byte blocks from that kittyBrain and concatenates them.
+the the script XORs cat.paws with flag and writes the result into x.txt
+If we XOR any candidate 8-byte block from kittyBrain with the corresponding 8-byte chunk of x, we get 8 bytes of the candidate plaintext for the flag. 
+If that is human-readable it’s a strong clue that this block was used at that position.
+So brute forcing for every 8-byte block in kittyBrain and for each 8-byte chunk of x compute block XOR x_chunk and test whether the result looks like printable ASCII.
