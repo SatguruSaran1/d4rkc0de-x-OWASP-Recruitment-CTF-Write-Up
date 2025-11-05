@@ -1,0 +1,4 @@
+PHP endpoint at http://192.168.1.250:6767/ accepts POST requests and on wrong guesses it prints the MD5 of the real flag and the MD5 of your guess. On success it prints the flag.
+The code compares md5($flag) == md5($guess) using == instead of === and because of ==  when both operands look like numbers, PHP converts them to numbers and compares numerically.
+If both hashes are strings that match the pattern (start with "0e" and are followed only by digits) both will be = 0, making the == comparison return true.
+I had to use assistance of ai as I was unfamiliar with this topic.
