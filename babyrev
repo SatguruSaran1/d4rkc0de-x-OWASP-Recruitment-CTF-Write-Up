@@ -1,2 +1,4 @@
-The program swapped adjacent input bytes and XORED with xr_array
-it then checked with check_array so input could be found using a python script which xors adjacent check_array and xr_array
+The program swapped adjacent input bytes and XORED with xr_array.
+it then checked with check_array so input could be found using a python script which xors adjacent check_array and xr_array.
+Read the .data section and grab the two arrays.
+Then generate a python script in which input[j] = check_array[j^1] ^ xr_array[j^1].
